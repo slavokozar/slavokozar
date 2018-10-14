@@ -1,16 +1,35 @@
 //Mixins
 @import 'mixins/font-face';
 
+//Variables
+@import 'variables';
+
 // Normalize
-@import '~normalize.css/normalize.css';
+@import 'normalize';
 
 // Blanka
 @import 'blanka';
 
 // Fonts
 @import 'fonts';
+@import 'fontawesome/fontawesome.scss';
+@import 'fontawesome/fa-regular.scss';
+@import 'fontawesome/fa-solid.scss';
+@import 'fontawesome/fa-brands.scss';
 
 @import 'general';
 
+@import 'components/header';
 
-@import 'header';
+@import 'components/wrapper';
+
+@import 'components/aside';
+
+@import 'components/article';
+
+
+
+
+
+
+

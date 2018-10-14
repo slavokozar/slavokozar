@@ -1,0 +1,17 @@
+@media ($breakpoint-md) {
+  #wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+
+    aside{
+      width: 20vw;
+      padding: 0 1rem;
+
+    }
+
+    main{
+      width: calc(100% - 20vw);
+      padding: 0 1rem;
+    }
+  }
+}

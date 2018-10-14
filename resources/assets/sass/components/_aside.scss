@@ -1,0 +1,53 @@
+aside {
+  display: none;
+
+  .aside-image {
+    margin: 0 2.5rem;
+
+    img{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .aside-extract {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: .1rem;
+    }
+
+    h3 {
+      color: $color-secondary;
+      font-size: 1.3rem;
+      margin-bottom: .1rem;
+      border-top:1px solid $color-secondary;
+      font-weight: 400;
+      strong{
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+
+    h4{
+      font-family: BioRhyme, Sans;
+      font-size: 1rem;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+
+    p{
+      margin-bottom: .1rem;
+    }
+
+    .date{
+      font-weight: 200;
+      font-size: .8rem;
+    }
+  }
+
+  @media ($breakpoint-md) {
+    display: block;
+  }
+}
+
+

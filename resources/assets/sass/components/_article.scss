@@ -1,0 +1,43 @@
+article{
+  font-size: 1.2rem;
+
+  blockquote{
+    margin: 0 0 1.5rem 0;
+    padding: 4rem .5rem 1rem .5rem;
+    text-align: center;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 3px solid rgba(0,0,0,0.5);
+    font-family: SpaceMono;
+    font-weight: 500;
+    position: relative;
+
+    &:before{
+      display: block;
+      height: 0;
+      text-align: center;
+      content: "“";
+      font: italic 3rem BioRhyme, Sans;
+      color: #999;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    footer{
+      cite{
+        font-style: normal;
+        font-family: BioRhyme, Sans;
+        font-size: 70%;
+      }
+
+    }
+  }
+
+  figure{
+    text-align: center;
+    figcaption{
+      font-size: 70%;
+    }
+  }
+}

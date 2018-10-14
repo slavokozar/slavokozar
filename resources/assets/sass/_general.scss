@@ -3,11 +3,19 @@ body{
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: -.003em;
+  box-sizing: border-box;
 }
 
-h1, h2{
+h1{
   font-family: SpaceMono;
   font-weight: 700;
+  font-size: 2.2rem;
+}
+
+h2{
+  font-family: SpaceMono;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 h3, h4, h5{
@@ -15,92 +23,36 @@ h3, h4, h5{
   font-weight: 400;
 }
 
-
-article{
-  font-size: 1.4rem;
-  max-width: 740px;
-
-  blockquote{
-    margin: 0 0 1.5rem 0;
-    padding: 4rem .5rem 1rem .5rem;
-    text-align: center;
-    border: none;
-    border-top: 1px solid rgba(0,0,0,0.5);
-    border-bottom: 3px solid rgba(0,0,0,0.5);
-    font-family: SpaceMono;
-    font-weight: 500;
-    position: relative;
-
-    &:before{
-      display: block;
-      height: 0;
-      text-align: center;
-      content: "“";
-      font: italic 3rem BioRhyme, Sans;
-      color: #999;
-      position: absolute;
-      top: 0;
-      width: 100%;
-    }
-
-    footer{
-      cite{
-        font-style: normal;
-        font-family: BioRhyme, Sans;
-        font-size: 70%;
-      }
-
-    }
-  }
-
-  figure{
-    text-align: center;
-    figcaption{
-      font-size: 70%;
-    }
-  }
-}
-
 .container {
   width: 100%;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 0 1rem;
+  margin: 0 auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+.hidden{
+  display: none;
+}
 
-  article {
-    max-width: 540px;
+.visible-b{
+  display: block;
+}
+
+.visibne-f{
+  display: flex;
+}
+
+
+@media ($breakpoint-md) {
+  h1{
+    font-size: 4vw;
+  }
+  h2{
+    font-size: 2.8vw;
   }
 }
 
-@media (min-width: 768px) {
+@media ($breakpoint-lg) {
   .container {
-    max-width: 720px;
-  }
-  article {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 740px;
-  }
-
-  article{
-    max-width: 740px;
-  }
-
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 960px;
+    max-width: 1140px;
   }
 }

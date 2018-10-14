@@ -7,14 +7,11 @@ Blanka.scss: Seting basic document typography
 - same left margins for ul/ol, dd, blockquote
 
 */
-
-
-/*
-Document minimal paddings
-*/
-
-body {
-  padding: 1.5rem;
+body{
+  margin: 0;
+  padding: .5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /*

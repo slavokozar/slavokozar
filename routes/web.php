@@ -11,6 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/cv', 'CVController@index')->name('cv');
+Route::get('/projekty', 'ProjectController@index')->name('projects');
+Route::get('/clanky', 'ArticleController@index')->name('articles');
+Route::get('/kontakt', 'ContactController@index')->name('contact');
+
+Auth::routes();
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
+
+    Route::get('/','DashController@index');
+
+    Route::group(['prefix' => '/cv', 'namespace' => 'CV'], function() {
+        Route::resource('certifications', 'CertificationController')->except(['show']);
+        Route::resource('education', 'EducationController')->except(['show']);
+        Route::resource('experience', 'ExperienceController')->except(['show']);
+        Route::resource('skills', 'SkillController')->except(['show']);
+    });
+
+    Route::resource('article', 'ArticleController')->except(['show']);
+    Route::resource('project', 'ProjectController')->except(['show']);
 });
